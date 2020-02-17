@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pemilihan Ketua UKM</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+    .header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        text-align: center;
+        width: 100%;
+        color: white;
+        background-color: #2F4F4F;
+    }
+    
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        background-color: black;
+    }
+    
+    img {
+        height: 40%;
+        width: 15%;
+    }
+   
+</style>
+
+<body>
+    <div class="card text-center ">
+        <div class="card-header p-3 sticky-top" style="background-color: #2F4F4F;">
+            <h2 style="color: white;">Pemilihan Ketua UKM</h2>
+        </div>
+        <div class="card-header">
+            <div class="card-body center">
+                <div class="card-deck">
+                    <div class="container">
+                        <div class="row justify-content-md-center">
+                            <div class="col col-lg-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="brahma.JPG" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="border-bottom:2px solid #bbb;">Calon Ketua Urut 1</h5>
+                                        <p class="card-text">Gde Agung Brahmana S</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small >
+                                        	<div style="font-weight: bold;font-size: 60px;margin-top: -20px; " id="value"></div>
+										    <input class="btn btn-success" type=button value="Tambah" onclick="klik1()" />
+										    <input class="btn btn-secondary" type=button value="Kurang" onclick="klik2()" />
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-lg-4">
+                                <div class="card">
+                                    <img style="height: 210px;" class="card-img-top" src="yafie.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title"style="border-bottom:2px solid #bbb;">Calon Ketua Urut 2</h5>
+                                        <p class="card-text">M Yafie Setyo</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small >
+                                        	<div style="font-weight: bold;font-size: 60px; margin-top: -20px; " id="value1"></div>
+										    <input class="btn btn-success" type=button value="Tambah" onclick="klik3()" />
+										    <input class="btn btn-secondary" type=button value="Kurang" onclick="klik4()" />
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="footer p-2" style="background-color: black;">
+            <p style="color: white;">© 2020 Created by <span style="font-weight: bold">Brahma Surya</span></p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var x = 0
+    var element = document.getElementById("value");
+    element.innerHTML = x;
+
+    function klik1() {
+        element.innerHTML = ++x;
+    }
+
+    function klik2() {
+        if (element.innerHTML < 0) {
+            x = 0;
+        }
+        if (element.innerHTML > 0) {
+            element.innerHTML = --x;
+        }
+
+    }
+    var y = 0
+    var element1 = document.getElementById("value1");
+    element1.innerHTML = y;
+
+    function klik3() {
+        element1.innerHTML = ++y;
+    }
+
+    function klik4() {
+        if (element1.innerHTML < 0) {
+            y = 0;
+        }
+        if (element1.innerHTML > 0) {
+            element1.innerHTML = --y;
+        }
+
+    }
+</script>
+
+</html>
